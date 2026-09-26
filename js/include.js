@@ -34,7 +34,8 @@ function wireMobileMenu(){
   const toggle = document.getElementById('menuToggle');
   const links = document.getElementById('navLinks');
   if(!toggle || !links) return;
-  toggle.addEventListener('click', () => {
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
     const isOpen = links.classList.toggle('open');
     toggle.setAttribute('aria-expanded', String(isOpen));
   });
@@ -42,6 +43,18 @@ function wireMobileMenu(){
     links.classList.remove('open');
     toggle.setAttribute('aria-expanded', 'false');
   }));
+  document.addEventListener('click', (e) => {
+    if(links.classList.contains('open') && !links.contains(e.target) && e.target !== toggle){
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape' && links.classList.contains('open')){
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
 }
 
 document.addEventListener('DOMContentLoaded', includePartials);
