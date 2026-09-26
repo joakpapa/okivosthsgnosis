@@ -2,6 +2,9 @@ backend:
   name: github
   repo: joakpapa/okivosthsgnosis
   branch: main
+  auth_methods:
+    - token
+
 
 
 # Πού αποθηκεύονται οι φωτογραφίες που ανεβάζει κάποιος μέσα από το CMS
