@@ -1,0 +1,115 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Πού αποθηκεύονται οι φωτογραφίες που ανεβάζει κάποιος μέσα από το CMS
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "home"
+    label: "Αρχική Σελίδα"
+    files:
+      - file: "content/home.json"
+        label: "Περιεχόμενο Αρχικής"
+        name: "home"
+        fields:
+          - { label: "Ετικέτα πάνω από τον τίτλο", name: "heroEyebrow", widget: "string" }
+          - { label: "Κύριος τίτλος", name: "heroTitle", widget: "string" }
+          - { label: "Υπότιτλος", name: "heroSubtitle", widget: "text" }
+          - { label: "Κείμενο κουμπιού ραντεβού", name: "heroCtaText", widget: "string" }
+          - { label: "Χρόνια λειτουργίας (στατιστικό)", name: "statYears", widget: "string" }
+          - { label: "Παιδιά ανά έτος (στατιστικό)", name: "statKids", widget: "string" }
+          - { label: "Είδη δραστηριοτήτων (στατιστικό)", name: "statActivities", widget: "string" }
+          - { label: "Κύρια φωτογραφία (hero)", name: "heroImage", widget: "image" }
+
+  - name: "about"
+    label: "Ποιοι Είμαστε"
+    files:
+      - file: "content/about.json"
+        label: "Φωτογραφία σελίδας 'Ποιοι Είμαστε'"
+        name: "about"
+        fields:
+          - { label: "Φωτογραφία", name: "aboutImage", widget: "image" }
+
+  - name: "gallery"
+    label: "Στιγμιότυπα (Gallery)"
+    files:
+      - file: "content/gallery.json"
+        label: "Φωτογραφίες Δραστηριοτήτων"
+        name: "gallery"
+        fields:
+          - label: "Φωτογραφίες"
+            name: "items"
+            widget: "list"
+            summary: "{{alt}}"
+            fields:
+              - { label: "Φωτογραφία", name: "image", widget: "image" }
+              - { label: "Περιγραφή (για προσβασιμότητα)", name: "alt", widget: "string" }
+
+  - name: "news"
+    label: "Ανακοινώσεις"
+    files:
+      - file: "content/news.json"
+        label: "Λίστα Ανακοινώσεων"
+        name: "news"
+        fields:
+          - label: "Ανακοινώσεις"
+            name: "items"
+            widget: "list"
+            summary: "{{title}} — {{date}}"
+            fields:
+              - { label: "Τίτλος", name: "title", widget: "string" }
+              - { label: "Ημερομηνία", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+              - { label: "Κείμενο", name: "text", widget: "text" }
+
+  - name: "activities"
+    label: "Δραστηριότητες"
+    files:
+      - file: "content/activities.json"
+        label: "Λίστα Δραστηριοτήτων"
+        name: "activities"
+        fields:
+          - label: "Δραστηριότητες"
+            name: "items"
+            widget: "list"
+            summary: "{{icon}} {{name}}"
+            fields:
+              - { label: "Εικονίδιο (emoji)", name: "icon", widget: "string" }
+              - { label: "Όνομα", name: "name", widget: "string" }
+              - { label: "Περιγραφή", name: "desc", widget: "string" }
+
+  - name: "faq"
+    label: "Συχνές Ερωτήσεις"
+    files:
+      - file: "content/faq.json"
+        label: "Λίστα Ερωτήσεων"
+        name: "faq"
+        fields:
+          - label: "Ερωτήσεις"
+            name: "items"
+            widget: "list"
+            summary: "{{q}}"
+            fields:
+              - { label: "Ερώτηση", name: "q", widget: "string" }
+              - { label: "Απάντηση", name: "a", widget: "text" }
+
+  - name: "blog"
+    label: "Ιστολόγιο (Blog)"
+    files:
+      - file: "content/blog.json"
+        label: "Άρθρα Ιστολογίου"
+        name: "blog"
+        fields:
+          - label: "Άρθρα"
+            name: "items"
+            widget: "list"
+            summary: "{{title}} — {{date}}"
+            fields:
+              - { label: "Slug (URL-friendly, π.χ. pos-na-epilexete)", name: "slug", widget: "string", pattern: ['^[a-z0-9-]+$', "Μόνο μικρά λατινικά, αριθμοί και παύλα"] }
+              - { label: "Τίτλος", name: "title", widget: "string" }
+              - { label: "Ημερομηνία", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+              - { label: "Εικόνα εξωφύλλου", name: "image", widget: "image" }
+              - { label: "Σύντομη περιγραφή (excerpt)", name: "excerpt", widget: "text" }
+              - { label: "Πλήρες κείμενο άρθρου (HTML)", name: "body", widget: "text" }
+

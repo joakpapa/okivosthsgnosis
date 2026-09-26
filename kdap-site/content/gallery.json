@@ -1,0 +1,8 @@
+{
+  "items": [
+    { "image": "https://picsum.photos/seed/okg-g1/700/700", "alt": "Παιδιά ζωγραφίζουν" },
+    { "image": "https://picsum.photos/seed/okg-g2/700/700", "alt": "Θεατρικό εργαστήρι" },
+    { "image": "https://picsum.photos/seed/okg-g3/700/700", "alt": "Παιχνίδι στην αυλή" },
+    { "image": "https://picsum.photos/seed/okg-g4/700/700", "alt": "Χειροτεχνία" }
+  ]
+}

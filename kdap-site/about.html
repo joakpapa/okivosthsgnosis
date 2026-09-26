@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ποιοι Είμαστε — Ο Κύβος της Γνώσης</title>
+<meta name="description" content="Γνωρίστε τον Κύβο της Γνώσης, το ΚΔΑΠ & Βρεφονηπιακό Σταθμό μας στον Κοπανό Ημαθίας: φιλοσοφία, η υπεύθυνη και το πρόγραμμα ΕΣΠΑ για δικαιούχες μητέρες.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪺</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Karla:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="about">
+<div data-include="partials/header.html"></div>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="breadcrumb"><a href="index.html">Αρχική</a> / Ποιοι Είμαστε</span>
+      <h1>Ο Κύβος της Γνώσης — ΚΔΑΠ &amp; Βρεφονηπιακός Σταθμός</h1>
+      <p>Συνδυάζουμε βρεφονηπιακή φροντίδα και Κέντρο Δημιουργικής Απασχόλησης Παιδιών (ΚΔΑΠ) στον ίδιο στοργικό χώρο στον Κοπανό Ημαθίας — από τα πρώτα βρεφικά βήματα έως τη δημιουργική απασχόληση εκτός σχολικού ωραρίου, βοηθώντας παράλληλα και τους γονείς που εργάζονται.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container grid-3" style="grid-template-columns:1.2fr 1fr; align-items:center;">
+      <div class="reveal">
+        <h2>Η φιλοσοφία μας</h2>
+        <p>Πιστεύουμε ότι κάθε παιδί χρειάζεται έναν χώρο όπου νιώθει ασφάλεια για να εκφραστεί. Στον Κύβο της Γνώσης, οι δραστηριότητες δεν είναι απλώς «απασχόληση» — είναι ευκαιρίες για αυτοπεποίθηση, φιλία και δημιουργικότητα.</p>
+        <p>Η ομάδα μας αποτελείται από εξειδικευμένους παιδαγωγούς που σχεδιάζουν κάθε πρόγραμμα με βάση την ηλικία και τα ενδιαφέροντα των παιδιών.</p>
+      </div>
+      <img id="aboutImg" class="reveal" src="https://picsum.photos/seed/okg-about/640/520" alt="Παιδαγωγοί με παιδιά σε δραστηριότητα" style="border-radius:var(--radius-l);">
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container">
+      <div class="card reveal" style="max-width:760px; margin-bottom:20px;">
+        <div class="icon">👩‍🎓</div>
+        <h3>Η υπεύθυνη</h3>
+        <p><b>Μουρατίδου Μαρία</b> είναι η υπεύθυνη του Κύβου της Γνώσης και το πρόσωπο που θα γνωρίσετε στο ραντεβού βιντεοκλήσης, καθοδηγώντας κάθε οικογένεια από την πρώτη επαφή.</p>
+      </div>
+      <div class="card reveal" style="max-width:760px;">
+        <div class="icon">🎓</div>
+        <h3>ΚΔΑΠ μέσω ΕΣΠΑ</h3>
+        <p>Συνεργαζόμαστε με την Ε.Ε.Τ.Α.Α. και το πρόγραμμα «Εναρμόνιση Οικογενειακής &amp; Επαγγελματικής Ζωής». Δικαιούχες μητέρες μπορούν να λάβουν voucher ΕΣΠΑ και να καλύψουν δωρεάν τα δίδακτρα.</p>
+        <a href="contact.html" class="btn btn-outline">Ρωτήστε μας για το voucher</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Συχνές ερωτήσεις</h2>
+      </div>
+      <div id="faqList" style="max-width:760px;">
+        <!-- Γεμίζει αυτόματα από content/faq.json (js/content.js) -->
+      </div>
+    </div>
+  </section>
+</main>
+
+<div data-include="partials/footer.html"></div>
+<script src="js/include.js"></script>
+<script src="js/main.js"></script>
+<script src="js/content.js"></script>
+</body>
+</html>
