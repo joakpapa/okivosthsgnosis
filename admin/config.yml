@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: joakpapa/okivosthsgnosis
   branch: main
+
 
 # Πού αποθηκεύονται οι φωτογραφίες που ανεβάζει κάποιος μέσα από το CMS
 media_folder: "images/uploads"
